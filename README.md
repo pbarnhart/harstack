@@ -104,5 +104,4 @@ HARstack surfaces the issues. Remediating them is a different conversation. If y
 ---
 
 **Built by Phil Barnhart, CIPP/US**  
-Director of Marketing Technology, ZenBusiness | Principal Consultant, YourExitRamp LLC  
 Newsletter: [Pixel and Policy](https://pixelsandpolicy.substack.com) -- Martech, Privacy, and Risky Stacks
