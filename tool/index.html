@@ -3050,9 +3050,9 @@ function render(findings, a, aqData) {
       <button class="tab active" role="tab" aria-selected="true" aria-controls="tab-findings" onclick="st('findings',this)">Findings ${high>0?`<span class="tbadge" aria-label="${high} high severity">${high}</span>`:''} ${med>0?`<span class="tbadge tbw" aria-label="${med} medium severity">${med}</span>`:''}</button>
       <button class="tab" role="tab" aria-selected="false" aria-controls="tab-domains" onclick="st('domains',this)">3rd-Party Domains <span class="tbadge tbn">${topDoms.length}</span></button>
       <button class="tab" role="tab" aria-selected="false" aria-controls="tab-cookies" onclick="st('cookies',this)">Cookies <span class="tbadge ${longCk.length>0?'':'tbo'}">${a.cookies.length}</span></button>
-      <button class="tab" role="tab" aria-selected="false" aria-controls="tab-cdp" onclick="st('cdp',this)">CDP Events <span class="tbadge ${(a.cdpEvents.length>0||a.sgtmCandidates.length>0)?(a.cdpEvents.some(e=>e.hasAllTrue||e.hasPII)||a.sgtmCandidates.length>0?'':'tbo'):'tbn'}">${a.cdpEvents.length + a.sgtmCandidates.length}</span></div>
-      <div class="tab" onclick="st('fppii',this)">POST PII <span class="tbadge ${((a.firstPartyPII?.length||0)+(a.thirdPartyPII?.length||0))>0?'':'tbo'}">${(a.firstPartyPII?.length||0)+(a.thirdPartyPII?.length||0)}</span></div>
-      <button class="tab" role="tab" aria-selected="false" aria-controls="tab-audit" onclick="st('audit',this)">Audit Questions <span class="tbadge tbi">${totalQ}</span></div>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="tab-cdp" onclick="st('cdp',this)">CDP Events <span class="tbadge ${(a.cdpEvents.length>0||a.sgtmCandidates.length>0)?(a.cdpEvents.some(e=>e.hasAllTrue||e.hasPII)||a.sgtmCandidates.length>0?'':'tbo'):'tbn'}">${a.cdpEvents.length + a.sgtmCandidates.length}</span></button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="tab-fppii" onclick="st('fppii',this)">POST PII <span class="tbadge ${((a.firstPartyPII?.length||0)+(a.thirdPartyPII?.length||0))>0?'':'tbo'}">${(a.firstPartyPII?.length||0)+(a.thirdPartyPII?.length||0)}</span></button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="tab-audit" onclick="st('audit',this)">Audit Questions <span class="tbadge tbi">${totalQ}</span></button>
     </div>
 
     <div id="tab-findings" class="tc active">
