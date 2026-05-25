@@ -354,6 +354,10 @@ body {
   color: #666;
   border-radius: 2px;
 }
+.reg-chip.re  { background: #fde8e8; color: #8b1a1a; border-color: #fde8e8; }
+.reg-chip.rc2 { background: #e8f0e8; color: #1a5b1a; border-color: #e8f0e8; }
+.reg-chip.ri  { background: #ffe8cc; color: #8b4500; border-color: #ffe8cc; }
+.reg-chip.rg  { background: #e8e8fc; color: #1a1a8b; border-color: #e8e8fc; }
 
 /* OUTCOME BUCKETS */
 .bucket-row {
@@ -562,7 +566,7 @@ footer {
     "priceCurrency": "USD"
   },
   "license": "https://opensource.org/licenses/MIT",
-  "softwareVersion": "1.0",
+  "softwareVersion": "2.0",
   "author": {
     "@type": "Person",
     "name": "Phil Barnhart",
@@ -619,13 +623,13 @@ footer {
 </div>
 
 <div class="dateline">
-  <span class="dateline-item"><strong>HARstack</strong> v1.0</span>
+  <span class="dateline-item"><strong>HARstack</strong> v2.0</span>
   <span class="dateline-sep">|</span>
   <span class="dateline-item"><strong>License</strong> MIT</span>
   <span class="dateline-sep">|</span>
-  <span class="dateline-item"><strong>Signatures</strong> 155+</span>
+  <span class="dateline-item"><strong>Signatures</strong> 200+</span>
   <span class="dateline-sep">|</span>
-  <span class="dateline-item"><strong>Regulations</strong> ECPA, CIPA, CCPA/CPRA, GLBA</span>
+  <span class="dateline-item"><strong>Regulations</strong> ECPA, CIPA, US State Privacy, GLBA</span>
   <span class="dateline-sep">|</span>
   <span class="dateline-item"><strong>Data Collected</strong> None</span>
   <span class="mit-badge">MIT Open Source</span>
@@ -665,7 +669,7 @@ footer {
 
   <div class="section">
     <div class="section-label">What It Detects</div>
-    <div class="section-headline">155+ tracker signatures with specific regulatory framing</div>
+    <div class="section-headline">200+ tracker signatures with specific regulatory framing</div>
     <p style="font-family:var(--sans);font-size:14px;color:#444;font-weight:300;line-height:1.75;max-width:680px;">Every finding includes a plain-language description of what the technology does, which regulations apply, and what a policy disclosure gap looks like in practice. Not general privacy law. Specific citations to the cases and enforcement actions being used in active litigation.</p>
     <div class="finding-grid">
       <div class="finding-card">
@@ -673,9 +677,9 @@ footer {
         <div class="finding-title">Microsoft Clarity</div>
         <div class="finding-body">Microsoft operates as an independent data controller, not a service provider. Its published terms reserve the right to create user profiles for advertising. That distinction changes who bears the ECPA exposure.</div>
         <div class="finding-regs">
-          <span class="reg-chip">ECPA</span>
-          <span class="reg-chip">CIPA</span>
-          <span class="reg-chip">CCPA/CPRA</span>
+          <span class="reg-chip re">ECPA</span>
+          <span class="reg-chip ri">CIPA</span>
+          <span class="reg-chip rc2">US State Privacy</span>
         </div>
       </div>
       <div class="finding-card">
@@ -683,8 +687,8 @@ footer {
         <div class="finding-title">Enhanced Conversions (Google)</div>
         <div class="finding-body">Hashed PII (SHA-256 email, phone) transmitted to Google. The FTC BetterHelp consent order established that hashing does not satisfy deletion obligations when the recipient can re-identify the value.</div>
         <div class="finding-regs">
-          <span class="reg-chip">ECPA</span>
-          <span class="reg-chip">CCPA/CPRA</span>
+          <span class="reg-chip re">ECPA</span>
+          <span class="reg-chip rc2">US State Privacy</span>
         </div>
       </div>
       <div class="finding-card warn">
@@ -692,8 +696,8 @@ footer {
         <div class="finding-title">GPC Signal Verification</div>
         <div class="finding-body">The tool checks whether Sec-GPC: 1 appears in actual request headers, not just in self-reported settings. A CMP that reports GPC compliance without the header is a documented CPPA enforcement concern.</div>
         <div class="finding-regs">
-          <span class="reg-chip">CCPA/CPRA</span>
-          <span class="reg-chip">CPPA Enforcement</span>
+          <span class="reg-chip rc2">US State Privacy</span>
+          <span class="reg-chip rc2">CPPA</span>
         </div>
       </div>
       <div class="finding-card">
@@ -701,7 +705,7 @@ footer {
         <div class="finding-title">RudderStack CNAME Detection</div>
         <div class="finding-body">CNAME deployments are first-party from the browser's perspective. They share cookies with the parent domain and bypass third-party cookie restrictions. That changes the consent enforcement model.</div>
         <div class="finding-regs">
-          <span class="reg-chip">CCPA/CPRA</span>
+          <span class="reg-chip rc2">US State Privacy</span>
         </div>
       </div>
       <div class="finding-card">
@@ -709,8 +713,8 @@ footer {
         <div class="finding-title">POST Body Analysis</div>
         <div class="finding-body">Scans outbound POST bodies for raw and hashed PII. Distinguishes first-party from third-party endpoints. Flags SHA-256 email transmitted to ad platforms with the BetterHelp citation.</div>
         <div class="finding-regs">
-          <span class="reg-chip">CCPA/CPRA</span>
-          <span class="reg-chip">ECPA</span>
+          <span class="reg-chip rc2">US State Privacy</span>
+          <span class="reg-chip re">ECPA</span>
         </div>
       </div>
       <div class="finding-card ok">
@@ -718,8 +722,8 @@ footer {
         <div class="finding-title">GLBA-Regulated Pages</div>
         <div class="finding-body">Detects tracking on pages handling non-public personal information. Pages with session replay surfaced a Safeguards Rule exposure.</div>
         <div class="finding-regs">
-          <span class="reg-chip">GLBA</span>
-          <span class="reg-chip">16 CFR § 313</span>
+          <span class="reg-chip rg">GLBA</span>
+          <span class="reg-chip rg">16 CFR § 313</span>
         </div>
       </div>
     </div>
@@ -759,7 +763,7 @@ footer {
         <div class="case-body">The one-party consent defense fails if interception serves a criminal or tortious purpose. The August 2025 ECPA Privacy Policy Order made privacy policy misrepresentation a sufficient predicate.</div>
       </div>
       <div class="case-item">
-        <span class="case-cite">FTC Docket No.C-4796</span>
+        <span class="case-cite">FTC File No. 2023-169, Docket C-4796</span>
         <div class="case-title">BetterHelp Consent Order</div>
         <div class="case-body">Hashing does not satisfy data deletion obligations when the recipient already possesses the underlying value. Applies directly to Enhanced Conversions and Customer Match implementations.</div>
       </div>
