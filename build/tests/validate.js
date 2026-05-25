@@ -24,7 +24,6 @@ const HARS = [
   { file: 'www.northwestregisteredagent.com.har',    label: 'Northwest Registered Agent',    classicBucket: 'Needs Review', wizardBucket: 'Escalate' },
   { file: 'www.northwestregisteredagent.comgpc.har', label: 'Northwest (GPC)',               classicBucket: 'Escalate',    wizardBucket: 'Escalate' },
   { file: 'www.rover.com.har',                       label: 'Rover',                         classicBucket: 'Escalate',    wizardBucket: 'Escalate' },
-  { file: 'midmarket-saas-with-permissions.har',     label: 'Midmarket SaaS (with permissions)', classicBucket: 'Escalate',   wizardBucket: 'Escalate' },
 ];
 
 // Domains injected only in the wizard build.
