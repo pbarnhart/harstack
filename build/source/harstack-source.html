@@ -40,6 +40,8 @@ body { background: var(--paper); color: var(--ink); font-family: var(--sans); mi
 .masthead-tool { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.75); background: rgba(255,255,255,0.12); padding: 3px 9px; border-radius: 2px; border: 1px solid rgba(255,255,255,0.2); }
 .masthead-spacer { flex: 1; }
 .masthead-v { font-family: var(--mono); font-size: 10px; color: rgba(255,255,255,0.80); }
+.masthead-navlink { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.75); text-decoration: none; padding: 3px 9px; border-radius: 2px; border: 1px solid rgba(255,255,255,0.2); }
+.masthead-navlink:hover { color: white; border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.1); }
 .dl-btn { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.25); padding: 5px 12px; border-radius: 2px; cursor: pointer; transition: all 0.15s; }
 .dl-btn:hover { background: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.5); color: white; }
 
@@ -450,6 +452,7 @@ textarea:focus, input[type="url"]:focus { outline: none; border-color: var(--hea
   <span class="masthead-sep">|</span>
   <span class="masthead-tool">HARstack</span>
   <div class="masthead-spacer"></div>
+  <a href="/captures/" class="masthead-navlink">Capture Guide</a>
   <span class="masthead-v">v2.0</span>
   <button class="dl-btn" onclick="dlTool()">⬇ Download / Run Locally</button>
 </div>
