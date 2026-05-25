@@ -26,6 +26,7 @@ const HARS = [
   { file: 'www.rover.com.har',                       label: 'Rover',                         classicBucket: 'Escalate',    wizardBucket: 'Escalate' },
   { file: 'corp-registration-site.har',              label: 'Corp Registration Site (main)',  classicBucket: 'Escalate',    wizardBucket: 'Escalate' },
   { file: 'corp-registration-site-orders.har',       label: 'Corp Registration Site (orders)', classicBucket: 'Escalate',    wizardBucket: 'Escalate' },
+  { file: 'usa-llc-filing.com.har',                  label: 'USA LLC Filing',                 classicBucket: 'Escalate',    wizardBucket: 'Escalate' },
 ];
 
 // Domains injected only in the wizard build.

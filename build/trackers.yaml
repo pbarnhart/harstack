@@ -3271,3 +3271,70 @@ trackers:
     action: >-
       Identify the specific libraries loaded from cdnjs. Consider self-hosting to eliminate
       the third-party dependency.
+
+  - pattern: "code.jquery.com"
+    name: "jQuery CDN"
+    category: "Hosting"
+    cc: an
+    risk: low
+    regs:
+      - US State Privacy
+    description: >-
+      jQuery Foundation CDN (code.jquery.com) serving the jQuery JavaScript library. Each
+      request transmits visitor IP and User-Agent to OpenJS Foundation infrastructure.
+      Lower risk than commercial trackers but still a third-party data egress.
+    action: >-
+      Consider self-hosting the jQuery library or migrating to a first-party CDN to
+      eliminate the third-party dependency.
+
+  - pattern: "ipapi.co"
+    name: "ipapi (IP Geolocation)"
+    category: "Analytics"
+    cc: an
+    risk: medium
+    regs:
+      - US State Privacy
+      - GDPR
+    description: >-
+      ipapi.co IP geolocation lookup service. Resolves visitor IP address to country, region,
+      city, and timezone. Commonly used for consent regionalization (determining whether GDPR
+      or CPRA applies) and for geo-targeted content. The raw visitor IP is transmitted to a
+      third-party data processor on every page load that triggers the lookup.
+    action: >-
+      Confirm what data is returned and how it is used. If used solely for consent
+      regionalization, verify no additional data is retained by ipapi.co. Consider a
+      first-party server-side geolocation lookup to avoid the third-party egress.
+
+  - pattern: "getrockerbox.com"
+    name: "Rockerbox (Attribution)"
+    category: "Advertising"
+    cc: a
+    risk: high
+    regs:
+      - ECPA
+      - US State Privacy
+    description: >-
+      Rockerbox marketing attribution pixel (getrockerbox.com). Rockerbox is a multi-touch
+      attribution and audience platform that tracks user journeys across paid, organic, and
+      email channels. Collects behavioral and conversion data to build cross-channel audience
+      segments and facilitate ad retargeting. Constitutes sale or sharing of personal
+      information under CPRA and equivalent state statutes.
+    action: >-
+      <<SR_ACTION>>
+
+  - pattern: "getclicky.com"
+    name: "Clicky Analytics"
+    category: "Analytics"
+    cc: an
+    risk: medium
+    regs:
+      - US State Privacy
+      - GDPR
+    description: >-
+      Clicky (getclicky.com) web analytics platform. Provides real-time visitor tracking,
+      heatmaps, and optional on-site session recording. The session recording feature
+      captures individual keystrokes, clicks, and scroll behavior. If session recording is
+      active, evaluate under the wiretapping standard.
+    action: >-
+      Confirm whether Clicky session recording (on-site analytics) is enabled. If active,
+      <<SR_ACTION>>
