@@ -258,7 +258,7 @@ MIT. Free to use, fork, and extend.
 
 ## Author
 
-Phil Barnhart, CIPP/US. Director of Marketing Technology at ZenBusiness. Principal Consultant at YourExitRamp LLC. Publisher of Pixel and Policy (pixelsandpolicy.substack.com), a newsletter covering martech, privacy law, and compliance.
+Phil Barnhart, CIPP/US. Principal Consultant at YourExitRamp LLC. Publisher of Pixel and Policy (pixelsandpolicy.substack.com), a newsletter covering martech, privacy law, and compliance.
 
 ## Links
 
@@ -295,11 +295,7 @@ Add the following `<script>` block inside the `<head>` of `index.html`. This pro
     "@type": "Person",
     "name": "Phil Barnhart",
     "url": "https://pixelsandpolicy.substack.com",
-    "jobTitle": "Director of Marketing Technology",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "ZenBusiness"
-    },
+    "jobTitle": "Principal Consultant",
     "hasCredential": {
       "@type": "EducationalOccupationalCredential",
       "name": "CIPP/US",
