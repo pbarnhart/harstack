@@ -218,8 +218,8 @@ trackers:
     action: >-
       Remove the legacy UA tag from your tag manager configuration. Confirm GA4 has fully replaced it.
 
-  - pattern: "pagead2.googlesyndication.com"
-    name: "Google Ads Conversion (CCM)"
+  - pattern: "googlesyndication.com"
+    name: "Google AdSense / Display Ads"
     category: "Advertising"
     cc: a
     risk: high
@@ -227,12 +227,15 @@ trackers:
       - ECPA
       - US State Privacy
     description: >-
-      Google Conversion Marketing Manager endpoint (/ccm/collect). Fires for Google Ads conversion
-      measurement and remarketing audience building. Sends page URL and event data to Google for ad
-      attribution. Constitutes "sharing" under CPRA.
+      Google AdSense and Display Network ad serving infrastructure (googlesyndication.com).
+      Subdomains include pagead2 (ad script loading) and ade (Google AdExchange/Display Network
+      ad delivery). Fires when the site runs Google Display ads or AdSense placements. Transmits
+      visitor browsing context and targeting signals to Google for programmatic ad matching.
+      Constitutes sale or sharing of personal information under CPRA.
     action: >-
-      Verify CMP suppresses this endpoint on GPC and opt-out. Confirm the Google Ads conversion tag in
-      GTM is consent-gated. Disclose Google Ads conversion measurement in your privacy policy.
+      Verify CMP suppresses this endpoint on GPC and opt-out. Confirm Google Ads tags in GTM
+      are consent-gated. Disclose Google Display/AdSense in your privacy policy under
+      third-party advertising.
 
   - pattern: "google.com/pagead/form-data"
     name: "Google Ads Enhanced Conversions (Form Data)"
